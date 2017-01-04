@@ -36,14 +36,23 @@
                         {{ Session::get('error') }}
                     </div>
                         @endif
-           
+        </form>
           <div class="form-group has-feedback">
-            <center><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;Iniciar sesión</button>&nbsp;&nbsp;<button class="btn btn-success"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Registrarse</button><br><br>
+            <center><button class="btn btn-primary" id="submit"><span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;Iniciar sesión</button>&nbsp;&nbsp;<button class="btn btn-success" id="registrar"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Registrarse</button><br><br>
             		<a href="">¿Has olvidado la contraseña?</a>
             </center>
           </div>
-        </form>
+
       </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
 </body>
 </html>
+<script>
+$('#registrar').click(function(){
+    window.open("{{URL::to('/register')}}","_self");
+});
+$('#submit').click(function(){
+    $('#form').submit();
+});
+
+</script>
