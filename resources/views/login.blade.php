@@ -3,8 +3,9 @@
 	@include('librerias')
 	<style>
 	body{
-	  background-image:url('futbol.jpg');
-	  background-repeat:no-repeat;
+	  background-image:url('background.jpg');
+	  background-repeat:repeat;
+    background-size:10%;
 	}
 	</style>
 </head>
